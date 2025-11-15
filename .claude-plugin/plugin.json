@@ -1,0 +1,119 @@
+{
+  "name": "agent-factory",
+  "version": "1.0.0",
+  "description": "Intelligent Claude Code agent generator with requirement analysis, Context7 research, and production-ready templates",
+  "author": {
+    "name": "GoosLab",
+    "email": "contact@moduai.kr",
+    "url": "https://github.com/gooslab"
+  },
+  "homepage": "https://github.com/gooslab/claude-code-agent-factory",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gooslab/claude-code-agent-factory.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-generation",
+    "claude-code",
+    "automation",
+    "agent-factory",
+    "context7",
+    "mcp",
+    "agent-templates",
+    "intelligent-agents",
+    "dev-tools",
+    "productivity"
+  ],
+  "agents": [
+    {
+      "name": "agent-factory",
+      "path": "agents/agent-factory.md",
+      "description": "Intelligent agent generator with Context7 research and template system. Analyzes requirements, recommends optimal Claude models, and generates production-ready agents."
+    }
+  ],
+  "skills": [
+    {
+      "name": "moai-alfred-agent-factory",
+      "path": "skills/moai-alfred-agent-factory/SKILL.md",
+      "description": "Master skill for agent generation intelligence, research, templates, and validation. Contains complete intelligence engine, research workflows, 3-tier template system, and validation framework."
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "context7",
+      "required": false,
+      "description": "Optional: Context7 MCP for official documentation research. Enhances agent generation with latest best practices. Falls back to WebFetch if unavailable."
+    }
+  ],
+  "compatibility": {
+    "claudeCode": ">=4.0.0",
+    "mcpVersion": ">=1.0.0"
+  },
+  "tags": [
+    "agent-creation",
+    "automation",
+    "productivity",
+    "development-tools",
+    "mcp",
+    "context7"
+  ],
+  "metadata": {
+    "pluginType": "agent-skill-combo",
+    "complexity": "advanced",
+    "category": "development-tools",
+    "maturity": "production",
+    "documentation": "docs/",
+    "examples": "examples/",
+    "tests": "tests/"
+  },
+  "permissions": {
+    "read": ["agents/", "skills/", "docs/", "examples/", ".claude-plugin/"],
+    "write": [],
+    "execute": ["mcp__context7__resolve-library-id", "mcp__context7__get-library-docs"]
+  },
+  "dependencies": {
+    "agents": [
+      "quality-gate"
+    ],
+    "skills": []
+  },
+  "installation": {
+    "methods": [
+      {
+        "name": "GitHub Direct",
+        "command": "/plugin install https://github.com/gooslab/claude-code-agent-factory.git",
+        "description": "Recommended: Install directly from GitHub repository"
+      },
+      {
+        "name": "GitHub with Version",
+        "command": "/plugin install https://github.com/gooslab/claude-code-agent-factory.git@v1.0.0",
+        "description": "Install specific version from GitHub"
+      },
+      {
+        "name": "Plugins Plus Marketplace",
+        "command": "/plugin marketplace add jeremylongshore/claude-code-plugins-plus && /plugin install agent-factory",
+        "description": "Install from Claude Code Plugins Plus community marketplace (after approval)"
+      }
+    ]
+  },
+  "support": {
+    "issues": "https://github.com/gooslab/claude-code-agent-factory/issues",
+    "discussions": "https://github.com/gooslab/claude-code-agent-factory/discussions",
+    "documentation": "https://github.com/gooslab/claude-code-agent-factory#readme",
+    "contributing": "https://github.com/gooslab/claude-code-agent-factory/blob/main/CONTRIBUTING.md"
+  },
+  "changelog": {
+    "version": "1.0.0",
+    "date": "2025-11-15",
+    "changes": [
+      "Initial production release",
+      "Standalone architecture (no MoAI-ADK dependency required)",
+      "3-tier template system (Simple/Standard/Complex)",
+      "Intelligence Engine with 5 core algorithms",
+      "Research Engine with Context7 MCP integration",
+      "Validation Framework with 4 quality gates",
+      "Advanced Features (versioning, multi-domain, optimization)"
+    ]
+  }
+}
